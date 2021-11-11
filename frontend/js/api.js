@@ -1,3 +1,5 @@
+// Fetching of all cameras @ backend
+
 async function getCameraListFromAPI() { 
     let cameraList = await fetch('http://localhost:3000/api/cameras')
    .then( function (response) {
@@ -14,6 +16,8 @@ async function getCameraListFromAPI() {
    );
    return cameraList;
 }
+
+// Fetching of selected camera @ backend
 
 async function getOneCameraFromAPI(id) { 
   let camera = await fetch(`http://localhost:3000/api/cameras/${id}`)
