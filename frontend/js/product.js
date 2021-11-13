@@ -36,7 +36,8 @@ function displayCamera(camera) {
     let basketOrder = JSON.parse(localStorage.getItem("basketItems"));
     const BtnSendToBasket = document.querySelector("#btn-sendToBasket"); //bouton écouté
     BtnSendToBasket.addEventListener("click", () => {
-      addCameraToLocalStorage(camera)
+      addCameraToLocalStorage(camera);
+      window.alert("Ajoutée au panier !");
     })         
   }
   
