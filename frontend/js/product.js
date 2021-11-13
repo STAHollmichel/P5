@@ -36,7 +36,7 @@ function displayCamera(camera) {
     let basketOrder = JSON.parse(localStorage.getItem("basketItems"));
     const BtnSendToBasket = document.querySelector("#btn-sendToBasket"); //bouton écouté
     BtnSendToBasket.addEventListener("click", () => {
-      addCameraToLocalStorage(id)
+      addCameraToLocalStorage(camera)
     })         
   }
   
@@ -46,16 +46,16 @@ function displayCamera(camera) {
 //récupération du panier
 
 
-function addCameraToLocalStorage(cameraId) {
+function addCameraToLocalStorage(camera) {
   if (localStorage.getItem("basket")) {
 //  Si a déjà basket dans le local storage 
     const basketOrder = JSON.parse(localStorage.getItem("basket"))
-    basketOrder.push(cameraId)
+    basketOrder.push(camera)
     localStorage.setItem("basket", JSON.stringify(basketOrder));
   }
   else {
     const basketOrder = [];
-    basketOrder.push(cameraId)
+    basketOrder.push(camera)
 
     //on l'envoi au local storage
     localStorage.setItem("basket", JSON.stringify(basketOrder));
