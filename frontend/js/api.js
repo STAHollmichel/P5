@@ -30,7 +30,7 @@ async function getOneCameraFromAPI(id) {
    })
    .then(function (camera){
        console.log(camera);
-     return camera;  // Camera array call and their implementation on html
+     return camera;  // Camera call and their implementation on html
    }
  );
  return camera;
