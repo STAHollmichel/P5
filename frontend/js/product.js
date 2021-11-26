@@ -9,12 +9,6 @@ function displayCamera(camera) {
            <select id="lenses-list">${camera.lenses}</select>
            <p  class="card-price">Prix : ${camera.price /100},00 €</p>
            <form id="formProduct">
-                    <div>
-                        <button type="button" id="btn-less" class="btn" aria-label="button minus"><i class="fas fa-minus"></i></button>
-                        <input type="number" value="1" class="quantity" min="1" max="10" id="quantityNumber" aria-label="desired quantity to add to basket"/>
-                        <button type="button" id="btn-plus" class="btn" aria-label="button add"><i class="fas fa-plus-square"></i></button>
-                    </div>
-                    <small></small>
                     <button type="button" class="btn btn-warning" id="btn-sendToBasket" aria-label="final quantity to add to basket">Ajouter au panier</button>
                 </form>
          </div>
@@ -32,10 +26,10 @@ function displayCamera(camera) {
       document.querySelector("#lenses-list").innerHTML += 
       "<option>" + cameraLenses + "</option>";   
     }
-    //récupération du panier
-    let basketOrder = JSON.parse(localStorage.getItem("basketItems"));
-    const BtnSendToBasket = document.querySelector("#btn-sendToBasket"); //bouton écouté
-    BtnSendToBasket.addEventListener("click", () => {
+    //envoi du item au panier panier
+    let basketOrder = JSON.parse(localStorage.getItem("cartItems"));
+    const BtnSendToCart = document.querySelector("#btn-sendToBasket"); //bouton écouté
+    BtnSendToCart.addEventListener("click", () => {
       addCameraToLocalStorage(camera);
       window.alert("Ajoutée au panier !");
     })         
@@ -44,21 +38,22 @@ function displayCamera(camera) {
   start();
 
 
-//récupération du panier
+// gestion de item dans le panier
 
 
 function addCameraToLocalStorage(camera) {
-  if (localStorage.getItem("basket")) {
-//  Si a déjà basket dans le local storage 
-    const basketOrder = JSON.parse(localStorage.getItem("basket"))
-    basketOrder.push(camera)
-    localStorage.setItem("basket", JSON.stringify(basketOrder));
+  if (localStorage.getItem("cart")) {
+//  Si a déjà cart dans le local storage 
+    const cartOrder = JSON.parse(localStorage.getItem("cart"))
+    cartOrder.push(camera)
+    localStorage.setItem("cart", JSON.stringify(cartOrder));
   }
   else {
-    const basketOrder = [];
-    basketOrder.push(camera)
+    const cartOrder = [];
+    cartOrder.push(camera)
 
     //on l'envoi au local storage
-    localStorage.setItem("basket", JSON.stringify(basketOrder));
+    localStorage.setItem("cart", JSON.stringify(cartOrder));
   }
 }
+
