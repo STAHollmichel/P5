@@ -2,7 +2,6 @@ displayLocalStorage();
   
 function displayLocalStorage() {
     const cartOrder = JSON.parse(localStorage.getItem("cart"))
-    console.log(cartOrder);
     const priceList = cartOrder.map((item)=>item.price)
     const total = priceList.reduce((a, b) => a + b)
     if(!cartOrder){
@@ -26,10 +25,11 @@ function displayLocalStorage() {
                 `);   
         }
         document.querySelector("#cart_total").insertAdjacentHTML("beforeEnd", `
-                        <span class="bg info" id="total-cart-price"><strong>${total/100},00€</strong></span>`);
+                        <span class="bg info" id="total-cart-price"><p><strong>Total: ${total/100},00€</strong><p></span>`);
     }
 }
 
+clearCart();
 
 async function clearCart() {
     document.querySelector("#cart_clear").insertAdjacentHTML("beforeEnd", `
@@ -41,5 +41,3 @@ async function clearCart() {
         window.location.reload();
     })         
 }
-
-clearCart();
