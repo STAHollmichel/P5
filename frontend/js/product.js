@@ -8,9 +8,10 @@ function displayCamera(camera) {
            <h5 class="card-title">${camera.name}</h5>
            <select id="lenses-list">${camera.lenses}</select>
            <p  class="card-price">Prix : ${camera.price /100},00 €</p>
-           <form id="formProduct">
-                    <button type="button" class="btn btn-warning" id="btn-sendToBasket" aria-label="final quantity to add to basket">Ajouter au panier</button>
-                </form>
+           <div id="btn-zone">
+              <button type="button" class="btn btn-warning" id="btn-sendToBasket" aria-label="final quantity to add to basket">Ajouter au panier</button>
+              <a href="./cart.html" class="btn btn-warning">Panier</a>
+           </div>
          </div>
      </div>`
      );   
