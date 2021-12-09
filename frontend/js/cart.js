@@ -1,9 +1,17 @@
 displayLocalStorage();
   
 function displayLocalStorage() {
+    
     const cartOrder = JSON.parse(localStorage.getItem("cart"))
-    const priceList = cartOrder.map((item)=>item.price)
-    const total = priceList.reduce((a, b) => a + b)
+
+    let priceList = []
+    let total = 0
+
+    if (cartOrder != null) {
+        priceList = cartOrder.map((item)=>item.price)
+        total = priceList.reduce((a, b) => a + b)
+    }
+
     if(!cartOrder){
         document.querySelector("#cart_status").innerText = "Votre panier est vide !";
     }
@@ -33,7 +41,7 @@ clearCart();
 
 async function clearCart() {
     document.querySelector("#cart_clear").insertAdjacentHTML("beforeEnd", `
-        <button class="btn btn-warning" id="clearCart-btn" type="button">Vider le panier</button>`);
+        <button class="btn btn-full-tertiary" id="clearCart-btn" type="button">Vider le panier</button>`);
     const BtnClearCart = document.querySelector("#clearCart-btn");
         BtnClearCart.addEventListener("click", () => {
         localStorage.clear(); //How to refresh action on Page?
