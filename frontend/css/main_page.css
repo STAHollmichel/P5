@@ -9,3 +9,7 @@
     width: 250px; 
     height: 160px;
 }
+
+.card p {
+    font-family: 'Titillium Web', sans-serif;
+}

@@ -21,10 +21,6 @@ h1, h2, h3, h4, h5, p, a {
     color: #261725;
 }
 
-.card p {
-    font-family: 'Titillium Web', sans-serif;
-}
-
 /* Link */
 a:link, a:visited, a:hover, a:active { 
     text-decoration: none; 

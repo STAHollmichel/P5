@@ -5,3 +5,7 @@
     box-shadow: 2px 5px 5px 1px #adadad;
     border: none;
 }
+
+.card p {
+    font-family: 'Titillium Web', sans-serif;
+}
