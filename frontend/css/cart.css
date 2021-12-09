@@ -1,0 +1,15 @@
+.card {
+    border: none;
+}
+
+.img-thumbnail {
+    border: none;
+}
+
+img {
+   border-radius: 0.25rem;
+}
+
+p {
+    margin-bottom: 0;
+}
