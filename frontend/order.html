@@ -11,25 +11,25 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="bg-info">
-        <div class="container-fluid bg-dark text-white">
-          <div class="row">
-            <nav class="col navbar navbar-expand-lg navbar-dark">
-              <a id="navbar__Brand" class="p-3" href="./index.html">
-                <img src="/backend/images/oniroco_logo.png" alt="logo Orinoco, link to index" width="100" height="50">
-              </a>
-              <form id="navbar__search" class="p-3 col-12 col-lg">
-                <input type="search" class="form-control form-control-dark" placeholder="Recherche de Produits" aria-label="Search">
-              </form>
-              <div id="navbar__Content" class="p-3 justify-content-end">
-                <button type="button" class="btn btn-outline-light me-2">Connexion</button>
-                <button type="button" class="btn btn-outline-light me-2">Favoris</button>
-                <button type="button" onclick="window.location.href='./cart.html';" class="btn btn-warning">Panier</button>
-              </div>
-            </nav>
-          </div>
+    <header id="orinoco__header" class="bg-info">
+      <div class="container-fluid bg-beige text-dark">
+        <div class="row">
+          <nav class="col navbar navbar-expand-lg">
+            <a id="navbar__Brand" href="./index.html">
+              <img src="/backend/images/orinoco_logo.png" alt="logo Orinoco, link to index">
+            </a>
+            <form id="navbar__search" class="p-3 col-12 col-lg">
+              <input type="search" class="form-control form-control-dark" placeholder="Recherche de Produits" aria-label="Search">
+            </form>
+            <div id="navbar__Content" class="p-3 justify-content-end">
+              <button type="button" class="btn btn-outline-light me-2">Connexion</button>
+              <button type="button" class="btn btn-outline-secondary me-2"><i class="fas fa-heart"></i></button>
+              <button  type="button" onclick="window.location.href='./cart.html';" class="btn btn-warning "><i class="fas fa-shopping-basket"></i></button>
+            </div>
+          </nav>
         </div>
-    </header>
+      </div>
+  </header>
     <!-- Main -->
     <main id="main-order-page">
         <div class="container order-resume text-center">
@@ -38,14 +38,13 @@
             </div>
             <div class="row text-justify col">
                 <p id="orderLine"></p>
-                <p id="delivery"> </p>
+                <p id="delivery"></p>
             </div>
             <div class="row col">
                 <p>A bientôt chez Orinoco</p>
             </div>
             <div class="row justify-content-center col-sm">
                 <a class="text-center  mt-5 mb-4 btn btn-dark col-3" href="index.html">Retour au site</a>
-    
             </div>
     </main>
     <!-- Footer -->
