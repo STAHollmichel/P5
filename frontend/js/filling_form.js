@@ -38,10 +38,11 @@ function fillingForm() {
           <label for="userEmail">Email</label>
           <input type="email" namel"email" class="form-control" id="userEmail" placeholder="Entrez votre adresse email @" pattern="^[a-zA-Z0-9._-]+[@]{1}[a-zA-Z0-9._-]+[.]{1}[a-z]{2,8}$" required/>
       </div>
-    </form>
-    <div class="align-self-center m-3">
+      <div class="text-center m-3">
           <button type="submit" value="submit" class="btn btn-full-secondary" id="btn-form-valid" >Valider la commande</button>
-    </div>`);
+      </div>
+    </form>
+    `);
 }
   
 
