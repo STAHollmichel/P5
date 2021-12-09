@@ -1,0 +1,194 @@
+    /* //Custom class// */
+
+/* //Colors// */
+
+    /* Background */
+
+.ori-bg0 { 
+    background: #F2EBF1;
+}
+.ori-bg1 { 
+    background: #261725;
+}
+
+.ori-bg2 { 
+    background: #8F5BFE;
+}
+
+.ori-bg3 {
+    background: #F28B0C;
+}
+
+    /* Text */
+
+.ori-c0 {
+    color: #F2EBF1;
+}
+
+.ori-c1 {
+    color: #261725;
+}
+
+.ori-c2 {
+    color: #8F5BFE;
+}
+
+.ori-c3 {
+    color: #F28B0C;
+}
+
+    /* Border */
+
+.ori-bc0 {
+    border-color: #F28B0C;
+}
+
+.ori-bc1 {
+    border-color: #261725;
+}
+
+.ori-bc2 {
+    border-color: #8F5BFE;
+}
+
+.ori-bc3 {
+    border-color: #F28B0C;
+}
+
+.ori-gr0 {
+    background-image:linear-gradient(#d3c9d1 1px, #FFFF 1%);
+}
+
+.ori-gr1 {
+    background-image:linear-gradient(#d3c9d1 1px, #F2EBF1 1%);
+}
+/* //Buttons// */
+
+
+.btn-collapsed-nav {
+    background-color: #F2EBF1;
+    color: #8F5BFE; 
+    border: none;
+    
+}
+
+.btn-collapsed-nav:hover {
+    color: #F28B0C; 
+} 
+
+    /* Outline-btn */
+
+.btn-outline-primary { 
+    color: #261725;
+    border-color: #261725;
+}
+
+.btn-outline-primary:hover { 
+    background-color: #261725;
+    color: #F2EBF1;
+    border-color: #261725;
+}
+
+.btn-outline-secondary { 
+    background-color: #F2EBF1;
+    color: #8F5BFE; 
+    border-color: #8F5BFE;
+}
+
+.btn-outline-secondary:hover { 
+    background-color: #8F5BFE;
+    color: #F2EBF1; 
+    border-color: #8F5BFE;
+}
+
+.btn-outline-tertiary {
+    background-color: #F2EBF1;
+    border-color: #F28B0C;
+    color: #F28B0C;
+}
+
+.btn-outline-tertiary:hover {
+    background-color: #F28B0C;
+    border-color: #F28B0C;
+    color: #F2EBF1
+}
+
+    /* Full-btn */
+
+.btn-full-secondary { 
+    background-color: #8F5BFE;
+    color: #F2EBF1;
+    border-color: #8F5BFE;
+}
+
+.btn-full-secondary:hover { 
+    background-color: #F2EBF1;
+    color: #8F5BFE;
+    border-color: #8F5BFE;
+}
+
+.btn-full-tertiary { 
+    background-color: #F28B0C;
+    border-color: #F28B0C;
+    color: #F2EBF1;
+}
+
+.btn-full-tertiary:hover { 
+    background-color: #F2EBF1;
+    border-color: #F28B0C;
+    color: #F28B0C;
+}
+
+/* //Type// */
+    
+    /* Font */
+
+    /* Font-weight */
+
+.fw-el {
+    font-weight: 200;
+}
+
+.fw-l {
+    font-weight: 300;
+}
+
+.fw-r {
+    font-weight: 400;
+}
+
+.fw-sb {
+    font-weight: 600;
+}
+
+.fw-b {
+    font-weight: 700;
+}
+
+    /* Line height */
+
+.lh-0 {  
+    line-height: 0;
+}
+
+
+
+    /* Fa Icons */
+
+
+/* Price tag Icon*/
+.pstn-rlt {
+    position: relative;
+}
+
+.pstn-abs {
+    position: absolute;
+    left: 6em;
+    bottom:4.7em ;
+}
+
+/* Social Icons */
+
+.scl-1:hover {
+    color: #8F5BFE;
+}

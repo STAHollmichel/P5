@@ -1,0 +1,65 @@
+    /* //Main elements// */
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height:100%;
+}
+
+main {
+    min-height: 70%;
+}
+
+    /* //Font// */
+
+/* Type */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+h1, h2, h3, h4, h5, p, a {
+    color: #261725;
+}
+
+.card p {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/* Link */
+a:link, a:visited, a:hover, a:active { 
+    text-decoration: none; 
+}
+    
+    /* //Header// */
+
+    /* Logo */
+
+#navbar_brand, img {
+    width: 100px;
+    height: 50px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+    /* //Footer// */
+
+footer {
+        position: relative;
+        clear: both;
+        background-image:linear-gradient(#d3c9d1 1px, #F2EBF1 1%);
+}
+
+footer, ul, li, a {
+    list-style: none;
+}
+
+.footer_link:hover {
+    font-weight: 600;
+    color: #F28B0C;
+}
+
+.copyright p {
+    border-top:1px solid #d3c9d1 ;
+} 
+

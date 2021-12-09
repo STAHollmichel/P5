@@ -1,0 +1,11 @@
+    /* Camera Card's */
+
+.card {
+    box-shadow: 2px 5px 5px 1px #adadad;
+    border: none;
+}
+
+.card-img-top { 
+    width: 250px; 
+    height: 160px;
+}
