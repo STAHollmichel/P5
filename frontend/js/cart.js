@@ -33,7 +33,7 @@ function displayLocalStorage() {
                 `);   
         }
         document.querySelector("#cart_total").insertAdjacentHTML("beforeEnd", `
-                        <span class="bg info" id="total-cart-price"><p><strong>Total: ${total/100},00€</strong><p></span>`);
+                        <span class="bg info" id="total-cart-price"><p class="fw-b">Total: ${total/100},00€<p></span>`);
     }
 }
 
