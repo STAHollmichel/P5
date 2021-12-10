@@ -7,13 +7,13 @@ function fillingForm() {
     `
   <div class="accordion" id="form">
     <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#formcollapse" aria-expanded="true" aria-controls="collapseOne">
-        <h2>Formulaire</h2>
+      <button class="accordion-button ori-bg0" type="button" data-bs-toggle="collapse" data-bs-target="#formcollapse" aria-expanded="true" aria-controls="collapseOne">
+        <h2 class="pe-3">Formulaire</h2>
       </button>
     </h2>
     <div id="formcollapse" class="accordion-collapse collapse" data-bs-parent="#form">
       <div class="container d-flex flex-column">
-        <form class="col-lg-6 align-self-center mt-4">
+        <form class="col-md-10 align-self-center mt-4">
           <div class="form-row">
               <div class="form-group col-md-6">
                   <label for="userName" >Nom</label>
