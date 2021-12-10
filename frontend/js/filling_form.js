@@ -3,46 +3,56 @@ fillingForm();
 
 function fillingForm() {
     
-    document.querySelector("#filling__form").insertAdjacentHTML("beforeEnd", 
+    document.querySelector("#filling_form").insertAdjacentHTML("beforeEnd", 
     `
-    <form class="col-lg-6 align-self-lg-center mt-4">
-      <div class="form-row">
-          <div class="form-group col-md-6">
-              <label for="userName" >Nom</label>
-              <input type="text" name="nom" class="form-control" id="userName" placeholder="Nom" pattern="^[A-Za-z- 'éè^]+$" required/>
+  <div class="accordion" id="form">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#formcollapse" aria-expanded="true" aria-controls="collapseOne">
+        <h2>Formulaire</h2>
+      </button>
+    </h2>
+    <div id="formcollapse" class="accordion-collapse collapse" data-bs-parent="#form">
+      <div class="container d-flex flex-column">
+        <form class="col-lg-6 align-self-center mt-4">
+          <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label for="userName" >Nom</label>
+                  <input type="text" name="nom" class="form-control" id="userName" placeholder="Nom" pattern="^[A-Za-z- 'éè^]+$" required/>
+              </div>
+              <div class="form-group col-md-6">
+                  <label for="userFirstName">Prénom</label>
+                  <input type="text" name="prénom" class="form-control" id="userFirstName" placeholder="Prénom" pattern="^[A-Za-z- éè^]+$" required/>
+              </div>
           </div>
-          <div class="form-group col-md-6">
-              <label for="userFirstName">Prénom</label>
-              <input type="text" name="prénom" class="form-control" id="userFirstName" placeholder="Prénom" pattern="^[A-Za-z- éè^]+$" required/>
+          <div class="form-group">
+              <label for="userAddress">Adresse</label>
+              <input type="text" name="adresse" class="form-control" id="userAddress" placeholder="Entrez votre adresse complète" pattern="^[A-Za-z- 0-9'ëêéàè]+$" required/>
           </div>
-      </div>
-      <div class="form-group">
-          <label for="userAddress">Adresse</label>
-          <input type="text" name="adresse" class="form-control" id="userAddress" placeholder="Entrez votre adresse complète" pattern="^[A-Za-z- 0-9'ëêéàè]+$" required/>
-      </div>
-      <div class="form-row">
-          <div class="form-group col-md-2">
-              <label for="postalCode" >Code Postal</label>
-              <input type="text" name="cPostal" class="form-control" id="postalCode" minlength="4" maxlength="6" pattern="^[0-9]+$" placeholder="ex : 76100" required/>
+          <div class="form-row">
+              <div class="form-group col-md-2">
+                  <label for="postalCode" >Code Postal</label>
+                  <input type="text" name="cPostal" class="form-control" id="postalCode" minlength="4" maxlength="6" pattern="^[0-9]+$" placeholder="ex : 76100" required/>
+              </div>
+              <div class="form-group col-md-6">
+                  <label for="city">Ville</label>
+                  <input type="text" name="ville" class="form-control" id="city" pattern="^[A-Za-z- éèà]+$" required/>
+              </div>
+              <div class="form-group col-md-4">
+                  <label for="country">Pays</label>
+                  <input type="text" name"pays" id="country" class="form-control" minlength="2" pattern="^[A-Za-z- ëê]+$" required/>
+              </div>
           </div>
-          <div class="form-group col-md-6">
-              <label for="city">Ville</label>
-              <input type="text" name="ville" class="form-control" id="city" pattern="^[A-Za-z- éèà]+$" required/>
+          <div class="form-group">
+              <label for="userEmail">Email</label>
+              <input type="email" namel"email" class="form-control" id="userEmail" placeholder="Entrez votre adresse email @" pattern="^[a-zA-Z0-9._-]+[@]{1}[a-zA-Z0-9._-]+[.]{1}[a-z]{2,8}$" required/>
           </div>
-          <div class="form-group col-md-4">
-              <label for="country">Pays</label>
-              <input type="text" name"pays" id="country" class="form-control" minlength="2" pattern="^[A-Za-z- ëê]+$" required/>
+          <div class="text-center m-3">
+              <button type="submit" value="submit" class="btn btn-full-secondary" id="btn-form-valid">Valider la commande</button>
           </div>
+        </form>
       </div>
-      <div class="form-group">
-          <label for="userEmail">Email</label>
-          <input type="email" namel"email" class="form-control" id="userEmail" placeholder="Entrez votre adresse email @" pattern="^[a-zA-Z0-9._-]+[@]{1}[a-zA-Z0-9._-]+[.]{1}[a-z]{2,8}$" required/>
-      </div>
-      <div class="text-center m-3">
-          <button type="submit" value="submit" class="btn btn-full-secondary" id="btn-form-valid" >Valider la commande</button>
-      </div>
-    </form>
-    `);
+    </div>
+  </div>`);
 }
   
 
