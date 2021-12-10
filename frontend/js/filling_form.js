@@ -1,7 +1,7 @@
-fillingForm();
+displayForm();
 
 
-function fillingForm() {
+function displayForm() {
     
     document.querySelector("#filling_form").insertAdjacentHTML("beforeEnd", 
     `
@@ -54,22 +54,6 @@ function fillingForm() {
     </div>
   </div>`);
 }
-  
-
-// function validateForm() {
-//   let x = document.forms["maCommande"]["nom"]["prénom"]["adresse"]["cPostal"]["ville"]["pays"]["email"].value;
-//   if (x == "") {
-//     alert("Veuillez remplir le formulaire");
-//     return false;
-//   }
-// }
-
-// /* <form name="myForm" action="/order.html" onsubmit="return validateForm()" method="post">
-//   Name: <input type="text" name="fname">
-//   <input type="submit" value="Submit">
-// </form> */
-
-
 
 
 function formManagement() {
@@ -106,7 +90,7 @@ function formManagement() {
         let contact = getUserInfo();
         let dataOrder = {contact, products};
         
-        //sendl'objet dataOrder to api
+        //end objet dataOrder to api
         fetch('http://localhost:3000/api/cameras/order', {
           method: "POST",
           headers: { 
