@@ -8,7 +8,7 @@ function displayCamera(camera) {
         <div class="camera-detail d-flex flex-column justify-content-between">
           <h5 class="card-title py-3">À propos de cet article</h5>
           <p class="card-text align-self-start">${camera.description}</p>
-          <p class="font-italic ps-3 fw-b ">Lentilles: 
+          <p class="font-italic ps-3 fw-b ">Objectifs de caméra: 
           <select id="lenses-list" class="mx-3">${camera.lenses}</select>
           </p>
           <p class="card-price px-3 fw-sb pstn-rlt"> ${camera.price /100},00 € </p><i class="fas fa-tag lh-0 pstn-abs"></i>
@@ -18,7 +18,7 @@ function displayCamera(camera) {
             <a href="./cart.html" class="btn btn-outline-tertiary align-self-end"><i class="fas fa-shopping-basket"></i></a>
           </div>
         </div>
-      </div
+      </div>
     </div>`
      );   
  }
@@ -45,7 +45,7 @@ function displayCamera(camera) {
   start();
 
 
-// gestion de item dans le panier
+// gestion de items dans le panier
 
 
 function addCameraToLocalStorage(camera) {

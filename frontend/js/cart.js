@@ -34,13 +34,14 @@ function displayLocalStorage() {
                             </div>
                         </div>
                     </div>
+                </div>
                     `);   
         }
         document.querySelector("#cart_total").insertAdjacentHTML("beforeEnd", `
-                        <span class="d-flex">
+                        <div class="d-flex">
                             <p class="fw-b">Total:</p>
                             <p class="fw-sb ps-1" id="total-cart-price">${total/100},00€</p>
-                        </span>`);
+                        </div>`);
     }
 }
 
