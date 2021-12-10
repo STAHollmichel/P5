@@ -13,3 +13,17 @@ img {
 p {
     margin-bottom: 0;
 }
+
+.accordion-button {
+    border-radius: 0.25rem;
+    
+}
+
+.accordion-button:focus {
+    border-color: #d3c9d1;
+    box-shadow: 0 0 0 2px #d3c9d1;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #d3c9d1;
+}
