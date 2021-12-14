@@ -1,10 +1,14 @@
+// Affichage de la cámera sélectionné
 
 function displayCamera(camera) {
+
   document.querySelector("#main-product-page").insertAdjacentHTML("beforeend", `
     <div class="camera card col-md-8 col-lg-6 p-3 m-3 ori-bg0" data-id="${camera._id}" id="camera-card">
       <h1 class="card-title">${camera.name}</h1>
       <div class="card-container flex-lg-row">
-        <img src="${camera.imageUrl}" class="card-img-top img-fluid rounded align-self-start" alt="camera product page image">
+        <picture>
+          <img src="${camera.imageUrl}" class="card-img-top img-fluid rounded align-self-start" alt="camera product page image">
+        </picture>
         <div class="camera-detail d-flex flex-column justify-content-between">
           <h5 class="card-title py-3">À propos de cet article</h5>
           <p class="card-text align-self-start">${camera.description}</p>
@@ -20,46 +24,58 @@ function displayCamera(camera) {
         </div>
       </div>
     </div>`
-     );   
+  );   
  }
   
+  // Api Fetching
 
-  async function start() {
-    const UrlParams = new URLSearchParams(window.location.search);
-    const id = UrlParams.get("id"); 
-    let camera = await getOneCameraFromAPI(id);
-    displayCamera(camera);
-    for (let cameraLenses of camera.lenses){
-      document.querySelector("#lenses-list").innerHTML += 
-      "<option>" + cameraLenses + "</option>";   
-    }
-    //envoi du item au panier panier
-    let basketOrder = JSON.parse(localStorage.getItem("cartItems"));
-    const BtnSendToCart = document.querySelector("#btn-sendToBasket"); //bouton écouté
-    BtnSendToCart.addEventListener("click", () => {
-      addCameraToLocalStorage(camera);
-      window.alert("Ajoutée au panier !");
-    })         
+async function start() {
+
+  //Prendre l'ID de la caméra affiché dans le url
+
+  const UrlParams = new URLSearchParams(window.location.search);
+  const id = UrlParams.get("id"); 
+
+  let camera = await getOneCameraFromAPI(id);
+  displayCamera(camera);
+
+  //Affichage des objectifs correspondants à chaque caméra
+
+  for (let cameraLenses of camera.lenses){
+    document.querySelector("#lenses-list").innerHTML += 
+    "<option>" + cameraLenses + "</option>";   
   }
+
+  // Activation d'ajout de la caméra au panier par le bouton ajouter
+
+  const BtnSendToCart = document.querySelector("#btn-sendToBasket");
+  BtnSendToCart.addEventListener("click", () => {
+    addCameraToLocalStorage(camera);
+    window.alert("Ajoutée au panier !");
+  })         
+}
   
   start();
 
-
-// gestion de items dans le panier
-
+  // Ajout de la caméra dans le panier
 
 function addCameraToLocalStorage(camera) {
+
+  // S'il y a déjà des caméras dans le panier, on continue à rajouter
+
   if (localStorage.getItem("cart")) {
-//  Si a déjà cart dans le local storage 
+
     const cartOrder = JSON.parse(localStorage.getItem("cart"))
     cartOrder.push(camera)
     localStorage.setItem("cart", JSON.stringify(cartOrder));
   }
+
+  // Si non, on crée un tableau vide et on met la caméra dedans
+
   else {
+    
     const cartOrder = [];
     cartOrder.push(camera)
-
-    //on l'envoi au local storage
     localStorage.setItem("cart", JSON.stringify(cartOrder));
   }
 }
