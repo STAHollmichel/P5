@@ -58,7 +58,12 @@ displayForm();
 
 function formManagement() {
 
-  const products = []
+  // Creation de un tableau qui va contenir la liste des produits qui sont dans le panier
+  
+  let products = []
+  cartOrder = JSON.parse(localStorage.getItem("cart"))
+  products = cartOrder.map((item)=>item._id) //on map le id de chaque produit pas que on veut que ça
+  
 
   let formInputs = document.querySelectorAll("#form-order input");
 
@@ -130,6 +135,7 @@ function formManagement() {
       })
       
       .then(order => {
+        // alert(JSON.stringify(order));
         localStorage.setItem("order", JSON.stringify(order));// On defini l'object comme une commande dans le localStorage
         localStorage.removeItem("cart") // On supprime le panier
         window.location.assign("order.html"); // On dirige vers la page de commande
