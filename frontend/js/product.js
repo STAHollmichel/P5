@@ -15,7 +15,10 @@ function displayCamera(camera) {
           <p class="font-italic ps-3 fw-b ">Objectifs de caméra: 
           <select id="lenses-list" class="mx-3">${camera.lenses}</select>
           </p>
-          <p class="card-price px-3 fw-sb pstn-rlt"> ${camera.price /100},00 € </p><i class="fas fa-tag lh-0 pstn-abs"></i>
+          <div class="d-flex flex-row align-items-center">
+            <p class="card-price ps-3 fw-sb"> ${camera.price /100},00 € </p>
+            <i class="fas fa-tag lh-0 ps-1"></i>
+          </div>
           <div id="btn-zone" class="align-self-end">
             <a href="./index.html" class="btn btn-outline-primary"><i class="fas fa-angle-left lh-0 pe-1"></i>Accueil</a>
             <button type="button" class="btn btn-outline-secondary" id="btn-sendToBasket" aria-label="add to cart">Ajouter<i class="fas fa-plus ps-1"></i></button>
