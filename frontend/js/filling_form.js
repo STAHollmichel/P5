@@ -62,7 +62,8 @@ function formManagement() {
   
   let products = []
   cartOrder = JSON.parse(localStorage.getItem("cart"))
-  products = cartOrder.map((item)=>item._id) //on map le id de chaque produit pas que on veut que ça
+  if (cartOrder != null) {
+  products = cartOrder.map((item)=>item._id)} //on map le id de chaque produit pas que on veut que ça
   
 
   let formInputs = document.querySelectorAll("#form-order input");
